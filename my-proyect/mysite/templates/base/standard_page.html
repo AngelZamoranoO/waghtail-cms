@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load wagtailcore_tags wagtailimages_tags %}
+
+{% block content %}
+
+       <div>
+                        {% if page.introduction %}
+                                {{ page.introduction }}
+                        {% endif %}
+                        <br>
+                        {{ page.body }}
+                        <br>
+                        {% image page.image fill-480x320 %} 
+        </div>
+            
+{% endblock content %}
